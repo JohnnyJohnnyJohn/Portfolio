@@ -29,27 +29,30 @@ percents.forEach(element => {
   j=j+2;
 });
 
-window.onscroll = function () {
+window.onscroll = () => animeCompetences();
+
+window.onload = () => animeCompetences();
+
+function animeCompetences () {
 
   if (window.scrollY >= 400) {
-      document.querySelectorAll(".dot").forEach(element => {
-        element.classList.add("animeDot");
-        element.style.visibility = "visible"
-      });
+    document.querySelectorAll(".dot").forEach(element => {
+      element.classList.add("animeDot");
+      element.style.visibility = "visible"
+    });
 
-      document.querySelectorAll("circle:nth-child(2)").forEach(element => {
-        element.classList.add("animeCircle");
-      });
+    document.querySelectorAll("circle:nth-child(2)").forEach(element => {
+      element.classList.add("animeCircle");
+    });
 
-      document.querySelectorAll(".inCircle img").forEach(element => {
-        element.classList.add("animeCircle");
-      });
+    document.querySelectorAll(".inCircle img").forEach(element => {
+      element.classList.add("animeCircle");
+    });
 
-      document.querySelector("#competences h1").classList.add("slideInFromUp");
+    document.querySelector("#competences h1").classList.add("slideInFromUp");
 
-      
-  }
-};
+    }
+}
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -60,10 +63,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
-
-// window.addEventListener('mousemove', function () {
-
-// })
 
 document.querySelectorAll(".dot").forEach(element => {
 
@@ -78,12 +77,3 @@ document.querySelectorAll(".dot").forEach(element => {
   });
 });
   
-
-
-// onmouseover 
-
-// document.querySelector(".menu").onmouseout = function(){
-//   document.querySelector(".nav-list").classList.remove("navActif");
-//   document.querySelector(".menu").classList.remove("menuActif");
-//   document.querySelector("#burger").classList.remove("hidden");
-// };

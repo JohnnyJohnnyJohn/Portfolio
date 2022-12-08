@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+
+@font-face {
+    font-family: 'SF Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF Pro Regular'), url('assets/fonts/SF-Pro-Display-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SF Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF Pro Bold'), url('assets/fonts/SF-Pro-Display-Bold.woff') format('woff');
+}
+
+@keyframes animeGradient {
+    0%{
+        background-position:0% 79%
+    }
+    50%{
+        background-position:100% 22%
+    }
+    100%{
+        background-position:0% 79%
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromUp {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animateDot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Cinzel;
+    overflow-x: hidden;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+/* ------------------HEADER------------------ */
+
+header {
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    background-color: #2a2a2a;
+    z-index: 100;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+li {
+    list-style: none;
+    animation: 1s ease-out 1s 1 slideInFromRight both;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    background-color: #2a2a2a;
+    color: #F9E6BF;
+}
+
+.nav-branding img {
+    height: 60px;
+}
+
+.nav-link {
+    color: #F9E6BF;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0083e6;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #F9E6BF;
+}
+
+/* ------------------PRESENTATION------------------ */
+
+#presentation{
+    background: linear-gradient(311deg, #003e63, #0083e6, #8f79da);
+    background-size: 300% 300%;
+    animation: animeGradient 25s ease infinite;
+    /* background-size: cover;
+    background-position: right; */
+    display: flex;
+    flex-direction: row;
+    /* font-family: 'SF Pro Bold'; */
+    align-items: center;
+    color: #F9E6BF;
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50vw;
+    height: calc(100vh - 70px);
+    padding-left: 50px;
+}
+
+#heroName{
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #2a2a2a;
+    animation: 1s ease-out 1s 1 slideInFromLeft both;
+}
+
+#heroText{
+    font-size: 24px;
+    text-shadow: 1px 1px 2px #2a2a2a;
+    animation: 1s ease-out 3s 1 slideInFromLeft both;
+}
+
+#avatar{
+    animation: 1s ease-out 2s 1 slideInFromRight both;
+}
+
+/* ------------------COMPETENCES------------------ */
+
+#competences{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: #2a2a2a;
+    padding: 40px;
+}
+
+#competences h1{
+    color: #F9E6BF;
+    font-size: 40px;
+    opacity: 0;
+}
+
+.slideInFromUp{
+    animation: 1s ease-out 0s 1 slideInFromUp both;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container .card .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    
+}
+
+.container .card .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+.container .card .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #191919;
+    transform: translate(5px, 5px);
+}
+
+.container .card .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    opacity: 0;
+}
+
+.animeCircle{
+    animation: fadeIn 2s ease both;
+    animation-delay: 2.5s;
+}
+
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    visibility: hidden;
+}
+
+.animeDot{
+    animation: animateDot 2s linear both;
+}
+
+.dot::before
+{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number img{
+    width: 50px;
+    opacity: 0;
+}
+
+.fadeOut{
+    animation: fadeIn 1s ease 0s 1 reverse both;
+}
+
+/* ------------------RESPONSIVE------------------ */
+
+@media(max-width:1024px) {
+    header{
+        animation: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: 120%;
+        top: 0px;
+        gap: 0;
+        flex-direction: column;
+        width: 30%;
+        text-align: center;
+        transition: 0.3s;
+        padding-top: 70px;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 70%;
+    }
+
+    #presentation{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    #avatar{
+        animation: 1s ease-out 0s 1 slideInFromLeft both;
+        align-self: center;
+    }
+
+    #hero{
+        width: 100vw;
+    }
+
+    #heroName{
+        animation: 1s ease-out 1s 1 slideInFromRight both;
+    }
+    
+    #heroText{
+        animation: 1s ease-out 2s 1 slideInFromLeft both;
+    }
+}
+
+@media(max-width:600px) {
+    #heroName{
+        font-size: 32px;
+    }
+    
+    #heroText{
+        font-size: 18px;
+    }
+}

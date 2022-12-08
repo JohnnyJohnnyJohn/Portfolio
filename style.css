@@ -188,7 +188,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    
     width: 50vw;
     height: calc(100vh - 70px);
     padding-left: 50px;
@@ -209,6 +209,9 @@ a {
 
 #avatar{
     animation: 1s ease-out 2s 1 slideInFromRight both;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
 }
 
 /* ------------------COMPETENCES------------------ */
@@ -381,6 +384,7 @@ a {
 
     #presentation{
         flex-direction: column-reverse;
+        justify-content: center;
         gap: 30px;
     }
 
@@ -391,6 +395,10 @@ a {
 
     #hero{
         width: 100vw;
+        height: auto;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
     }
 
     #heroName{
@@ -402,12 +410,17 @@ a {
     }
 }
 
-@media(max-width:600px) {
+@media(max-width:640px) {
     #heroName{
         font-size: 32px;
     }
     
     #heroText{
         font-size: 18px;
+    }
+
+    #competences h1{
+        text-align: center;
+        font-size: 30px;
     }
 }

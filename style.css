@@ -309,7 +309,7 @@ a {
     box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
 }
 
-.number{
+.inCircle{
     position: absolute;
     inset: 0;
     display: flex;
@@ -317,13 +317,28 @@ a {
     align-items: center;
 }
 
-.number img{
+.inCircle img{
+    position: absolute;
+    display: block;
+    margin: 0 auto;
     width: 50px;
     opacity: 0;
+    transition: all 1s ease;
+    backface-visibility: hidden;
 }
 
-.fadeOut{
-    animation: fadeIn 1s ease 0s 1 reverse both;
+.inCircle p{
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    color: #F9E6BF;
+    /* opacity: 0; */
+    transition: all 1s ease;
+    backface-visibility: hidden;
+}
+
+.flip{
+    transform: rotateX(-180deg);
 }
 
 /* ------------------RESPONSIVE------------------ */

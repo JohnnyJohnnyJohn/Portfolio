@@ -41,7 +41,7 @@ window.onscroll = function () {
         element.classList.add("animeCircle");
       });
 
-      document.querySelectorAll(".number img").forEach(element => {
+      document.querySelectorAll(".inCircle img").forEach(element => {
         element.classList.add("animeCircle");
       });
 
@@ -61,12 +61,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-document.querySelectorAll(".card").forEach(element => {
-  console.log(element);
+// window.addEventListener('mousemove', function () {
 
-  // element.onmouseover = function(){
-  //   element.classList.add("fadeOut");
-  // };
+// })
+
+document.querySelectorAll(".dot").forEach(element => {
+
+  element.addEventListener('mouseenter',function () {
+    element.parentElement.children[2].children[0].classList.add("flip");
+    element.parentElement.children[2].children[1].classList.remove("flip");
+  });
+
+  element.addEventListener('mouseleave',function () {
+    element.parentElement.children[2].children[0].classList.remove("flip");
+    element.parentElement.children[2].children[1].classList.add("flip");
+  });
 });
   
 

@@ -33,6 +33,8 @@ window.onscroll = () => animeCompetences();
 
 window.onload = () => animeCompetences();
 
+window.onload = () => document.getElementById("frame").setAttribute("src", "");
+
 function animeCompetences () {
 
   if (window.scrollY >= 400) {
@@ -52,6 +54,7 @@ function animeCompetences () {
     document.querySelector("#competences h1").classList.add("slideInFromUp");
 
     }
+    
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -77,3 +80,13 @@ document.querySelectorAll(".dot").forEach(element => {
   });
 });
   
+document.getElementById("frameBtn").addEventListener('click',function () {
+  document.getElementById("frame").className = "open";
+  document.getElementById("closeBtn").classList.add("actif");
+});
+
+document.getElementById("closeBtn").addEventListener('click',function () {
+  document.getElementById("frame").className = "close";
+  document.getElementById("frame").setAttribute("src", "");
+  document.getElementById("closeBtn").classList.remove("actif");
+});

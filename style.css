@@ -122,12 +122,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+    overflow-x: none;
 }
 
 body {
     font-family: Cinzel;
-    overflow-x: hidden;
+    overflow-x: none;
 }
 
 .flexColumn{
@@ -141,13 +141,14 @@ body {
 }
 
 .fullWidth{
-    width: 100%;
+    width: 100vw;
 }
 
 /* ------------------HEADER------------------ */
 
 header {
-    position: sticky;
+    position: fixed;
+    width: 100vw;
     top: 0;
     font-weight: bold;
     background-color: #2a2a2a;
@@ -225,6 +226,8 @@ li a {
     flex-direction: row;
     align-items: center;
     color: #F9E6BF;
+    padding-top: 70px;
+    overflow-x: none;
 }
 
 #hero{
@@ -259,12 +262,12 @@ li a {
 /* ------------------COMPETENCES------------------ */
 
 #competences{
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    /* width: 100vw; */
     background: #2a2a2a;
-    padding: 40px;
+    padding: 100px 0;
 }
 
 #competences h1{
@@ -381,19 +384,40 @@ li a {
     transform: rotateX(-180deg);
 }
 
-/* ------------------MARIO------------------ */
+/* ------------------PROJETS------------------ */
 
 #projets{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    background: linear-gradient(311deg, #003e63, #0083e6, #8f79da);
+    background-size: 300% 300%;
+    animation: animeGradient 25s ease infinite;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    /* width: 100vw; */
+    padding: 100px 0;
 }
 
 #projets h1{
     color: #F9E6BF;
     font-size: 40px;
+    margin-bottom: 40px;
+}
+
+#projets h2{
+    color: #F9E6BF;
+    margin: 5px;
+}
+
+#mario{
+    background-image: url("assets/images/back.png");
+    background-size: 250%;
+    border-width: 0;
+    border-radius: 20% 0;
+    box-shadow: 0 20px 50px 0 #00000040;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
 }
 
 #frame{
@@ -413,6 +437,12 @@ li a {
     backface-visibility: hidden;
     transform: scale(0);
     z-index: 2000;
+}
+
+#frameBtn{
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 #closeBtn{
@@ -494,6 +524,12 @@ li a {
         animation: 1s ease-out 0s 1 slideInFromLeft both;
         align-self: center;
     }
+
+    #avatar img{
+        object-fit: cover;
+        overflow:hidden;
+    }
+
 
     #hero{
         width: 100vw;

@@ -230,6 +230,7 @@ li a {
 /* ------------------PRESENTATION------------------ */
 
 #presentation{
+    position: relative;
     background: linear-gradient(311deg, #003e63, #0083e6, #8f79da);
     background-size: 300% 300%;
     animation: animeGradient 25s ease infinite;
@@ -268,6 +269,22 @@ li a {
     width: 50vw;
     display: flex;
     justify-content: center;
+}
+
+#down-arrow{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    animation: 2s ease-out 2s 1 slideInFromUp both;
+}
+
+#down-arrow img{
+    filter: drop-shadow(1px 1px 2px #2a2a2a);
+    transition: all 0.5s ease;
+}
+
+#down-arrow img:hover{
+    transform: translateY(20px);
 }
 
 /* ------------------COMPETENCES------------------ */
@@ -409,12 +426,11 @@ li a {
     padding: 100px 0;
 }
 
-#projets div{
+#listProjets{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 #projets h1{
@@ -618,6 +634,10 @@ li a {
     #heroText{
         animation: 1s ease-out 2s 1 slideInFromLeft both;
     }
+    
+    #down-arrow{
+        display: none;
+    }
 }
 
 @media(max-width:640px) {
@@ -632,5 +652,13 @@ li a {
     #competences h1{
         text-align: center;
         font-size: 30px;
+    }
+
+    #listProjets{
+        flex-direction: column;
+    }
+
+    #listProjets a{
+        margin-bottom: 20px;
     }
 }

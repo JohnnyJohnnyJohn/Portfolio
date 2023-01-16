@@ -33,7 +33,11 @@ window.onscroll = () => animeCompetences();
 
 window.onload = () => animeCompetences();
 
-window.onload = () => document.getElementById("frame").setAttribute("src", "");
+window.onload = () => document.getElementById("marioFrame").setAttribute("src", "");
+
+window.onload = () => document.getElementById("cineFrame").setAttribute("src", "");
+
+window.onload = () => document.getElementById("calcFrame").setAttribute("src", "");
 
 function animeCompetences () {
 
@@ -90,6 +94,8 @@ document.getElementById("marioFrameBtn").addEventListener('click',function () {
   document.getElementById("calcFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
+
+  console.log("mario OK");
 });
 
 document.getElementById("cineFrameBtn").addEventListener('click',function () {
@@ -102,6 +108,8 @@ document.getElementById("cineFrameBtn").addEventListener('click',function () {
   document.getElementById("calcFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
+
+  console.log("ciné OK");
 });
 
 document.getElementById("calcFrameBtn").addEventListener('click',function () {
@@ -114,6 +122,8 @@ document.getElementById("calcFrameBtn").addEventListener('click',function () {
   document.getElementById("cineFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
+
+  console.log("calc OK");
 });
 
 document.getElementById("closeBtn").addEventListener('click',function () {
@@ -127,4 +137,6 @@ document.getElementById("closeBtn").addEventListener('click',function () {
   document.getElementById("calcFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.remove("actif");
+
+  console.log("close OK");
 });

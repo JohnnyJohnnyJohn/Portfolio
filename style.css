@@ -59,6 +59,17 @@
     }
 }
 
+@keyframes slideInFromDown {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @keyframes animateDot{
     0%{
         transform: rotate(0deg);
@@ -167,7 +178,7 @@ li a {
     text-align: center;
     padding: 5px 25px;
     text-decoration: none;
-    animation: 1s ease-out 2s 1 fadeIn both;
+    animation: 1s ease-out 1s 1 slideInFromLeft both;
 }
 
 .navbar {
@@ -243,17 +254,17 @@ li a {
     font-size: 80px;
     font-weight: bold;
     text-shadow: 1px 1px 2px #2a2a2a;
-    animation: 1s ease-out 1s 1 slideInFromLeft both;
+    animation: 1s ease-out 1s 1 slideInFromUp both;
 }
 
 #heroText{
     font-size: 24px;
     text-shadow: 1px 1px 2px #2a2a2a;
-    animation: 1s ease-out 2s 1 fadeIn both;
+    animation: 1s ease-out 1s 1 slideInFromDown both;
 }
 
 #avatar{
-    animation: 1s ease-out 1s 1 slideInFromRight both;
+    animation: 1s ease-out 1s 1 slideInFromDown both;
     width: 50vw;
     display: flex;
     justify-content: center;
@@ -398,6 +409,14 @@ li a {
     padding: 100px 0;
 }
 
+#projets div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    
+}
+
 #projets h1{
     color: #F9E6BF;
     font-size: 40px;
@@ -412,6 +431,9 @@ li a {
 #mario{
     background-image: url("assets/images/back.png");
     background-size: 250%;
+}
+
+.projetsBtn{
     border-width: 0;
     border-radius: 20% 0;
     box-shadow: 0 20px 50px 0 #00000040;
@@ -420,18 +442,18 @@ li a {
     cursor: pointer;
 }
 
-#frame{
+#marioFrame{
     position: fixed;
-    top: 50px;
-    left: 50px;
-    width: calc(100vw - 100px);
-    height: calc(100vh - 100px);
+    top: 25px;
+    left: 25px;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 50px);
     background-color: black;
     background-image: url("assets/images/bruit.gif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 50px;
+    border-radius: 20px;
     border: none;
     box-shadow: 0 20px 50px 0 #00000040;
     backface-visibility: hidden;
@@ -439,24 +461,74 @@ li a {
     z-index: 2000;
 }
 
-#frameBtn{
+#cineFrame{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 50px);
+    background-color: black;
+    background-image: url("assets/images/bruit.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 50px 0 #00000040;
+    backface-visibility: hidden;
+    transform: scale(0);
+    z-index: 2000;
+}
+
+#calcFrame{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 50px);
+    background-color: black;
+    background-image: url("assets/images/bruit.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 50px 0 #00000040;
+    backface-visibility: hidden;
+    transform: scale(0);
+    z-index: 2000;
+}
+
+#cine{
+    background-image: url("assets/images/cine.gif");
+    background-size: 150% 95%;
+    background-position: center;
+}
+
+#calc{
+    background-image: url("assets/images/calc.gif");
+    background-size: 100% 100%;
+}
+
+.frameBtn{
     text-align: center;
     text-decoration: none;
     cursor: pointer;
 }
 
 #closeBtn{
-    top: 80px;
-    left: calc(100vw - 130px);
+    top: 30px;
+    left: calc(100vw - 80px);
     position: fixed;
     z-index: 2001;
     cursor: pointer;
     opacity: 0;
     transition: all 1s ease;
+    filter: invert(100%);
 }
 
 .actif{
-    animation: slideInFromUp 0.3s 0.7s linear both;
+    animation: fadeIn 0.3s 0.7s linear both;
 }
 
 

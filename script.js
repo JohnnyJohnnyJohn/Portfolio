@@ -80,13 +80,51 @@ document.querySelectorAll(".dot").forEach(element => {
   });
 });
   
-document.getElementById("frameBtn").addEventListener('click',function () {
-  document.getElementById("frame").className = "open";
+document.getElementById("marioFrameBtn").addEventListener('click',function () {
+  document.getElementById("marioFrame").className = "open";
+
+  document.getElementById("cineFrame").className = "close";
+  document.getElementById("calcFrame").className = "close";
+
+  document.getElementById("cineFrame").setAttribute("src", "");
+  document.getElementById("calcFrame").setAttribute("src", "");
+
+  document.getElementById("closeBtn").classList.add("actif");
+});
+
+document.getElementById("cineFrameBtn").addEventListener('click',function () {
+  document.getElementById("cineFrame").className = "open";
+
+  document.getElementById("marioFrame").className = "close";
+  document.getElementById("calcFrame").className = "close";
+
+  document.getElementById("marioFrame").setAttribute("src", "");
+  document.getElementById("calcFrame").setAttribute("src", "");
+
+  document.getElementById("closeBtn").classList.add("actif");
+});
+
+document.getElementById("calcFrameBtn").addEventListener('click',function () {
+  document.getElementById("calcFrame").className = "open";
+
+  document.getElementById("marioFrame").className = "close";
+  document.getElementById("cineFrame").className = "close";
+
+  document.getElementById("marioFrame").setAttribute("src", "");
+  document.getElementById("cineFrame").setAttribute("src", "");
+
   document.getElementById("closeBtn").classList.add("actif");
 });
 
 document.getElementById("closeBtn").addEventListener('click',function () {
-  document.getElementById("frame").className = "close";
-  document.getElementById("frame").setAttribute("src", "");
+  document.getElementById("marioFrame").className = "close";
+  document.getElementById("marioFrame").setAttribute("src", "");
+
+  document.getElementById("cineFrame").className = "close";
+  document.getElementById("cineFrame").setAttribute("src", "");
+
+  document.getElementById("calcFrame").className = "close";
+  document.getElementById("calcFrame").setAttribute("src", "");
+
   document.getElementById("closeBtn").classList.remove("actif");
 });

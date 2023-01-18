@@ -261,7 +261,7 @@ li a {
 #heroText{
     font-size: 24px;
     text-shadow: 1px 1px 2px #2a2a2a;
-    animation: 1s ease-out 1s 1 slideInFromDown both;
+    animation: 2s ease-out 2s 1 slideInFromDown both;
 }
 
 #avatar{
@@ -522,8 +522,9 @@ li a {
 }
 
 #calc{
-    background-image: url("assets/images/calc.gif");
-    background-size: 100% 100%;
+    background-image: url("assets/images/math.jpg");
+    background-size: auto 100%;
+    background-position: center;
 }
 
 .frameBtn{

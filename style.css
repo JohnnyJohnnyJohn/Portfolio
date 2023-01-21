@@ -434,15 +434,16 @@ li a {
     justify-content: space-evenly;
     width: 100%;    
 }
+#projets h1,#projets h2,#projets p{
+    color: #F9E6BF;
+}
 
 #projets h1{
-    color: #F9E6BF;
     font-size: 40px;
     margin-bottom: 40px;
 }
 
 #projets h2{
-    color: #F9E6BF;
     margin: 5px;
 }
 

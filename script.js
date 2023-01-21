@@ -94,6 +94,7 @@ document.getElementById("marioFrameBtn").addEventListener('click',function () {
   document.getElementById("calcFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
+  document.getElementById("closeBtn").style.zIndex = "3000";
 
   console.log("mario OK");
 });
@@ -108,6 +109,7 @@ document.getElementById("cineFrameBtn").addEventListener('click',function () {
   document.getElementById("calcFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
+  document.getElementById("closeBtn").style.zIndex = "3000";
 
   console.log("ciné OK");
 });
@@ -122,6 +124,7 @@ document.getElementById("calcFrameBtn").addEventListener('click',function () {
   document.getElementById("cineFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
+  document.getElementById("closeBtn").style.zIndex = "3000";
 
   console.log("calc OK");
 });
@@ -137,6 +140,7 @@ document.getElementById("closeBtn").addEventListener('click',function () {
   document.getElementById("calcFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.remove("actif");
+  document.getElementById("closeBtn").style.zIndex = "1";
 
   console.log("close OK");
 });

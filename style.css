@@ -140,6 +140,7 @@
 
 body {
     font-family: Quicksand;
+    text-shadow: 1px 1px 2px #2a2a2a;
     overflow-x: none;
 }
 
@@ -256,13 +257,11 @@ li a {
 #heroName{
     font-size: 80px;
     font-weight: bold;
-    text-shadow: 1px 1px 2px #2a2a2a;
     animation: 1s ease-out 1s 1 slideInFromUp both;
 }
 
 #heroText{
     font-size: 24px;
-    text-shadow: 1px 1px 2px #2a2a2a;
     animation: 2s ease-out 2s 1 slideInFromDown both;
 }
 
@@ -432,8 +431,26 @@ li a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;    
+    width: 100%;
 }
+
+.projetsCard{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 400px; 
+}
+
+.newWindow{
+    position: absolute;
+    top: 5px;
+    left: 77%;
+}
+
+.newWindow img{
+    width: 24px;
+}
+
 #projets h1,#projets h2,#projets p{
     color: #F9E6BF;
 }
@@ -520,7 +537,7 @@ li a {
 
 #cine{
     background-image: url("assets/images/cine.gif");
-    background-size: auto 85%;
+    background-size: auto 90%;
     background-position: center;
 }
 
@@ -565,7 +582,7 @@ li a {
 
 /* ------------------RESPONSIVE------------------ */
 
-@media(max-width:1024px) {
+@media(max-width:1200px) {
     header{
         animation: none;
     }
@@ -592,7 +609,7 @@ li a {
         top: 0px;
         gap: 0;
         flex-direction: column;
-        width: 30%;
+        width: 200px;
         text-align: center;
         transition: 0.3s;
         padding-top: 70px;
@@ -604,7 +621,7 @@ li a {
     }
 
     .nav-menu.active {
-        left: 70%;
+        left: calc(100% - 200px);
     }
 
     #presentation{
@@ -643,6 +660,15 @@ li a {
     #down-arrow{
         display: none;
     }
+
+    #listProjets{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #listProjets a{
+        margin-bottom: 20px;
+    }
 }
 
 @media(max-width:640px) {
@@ -657,13 +683,5 @@ li a {
     #competences h1{
         text-align: center;
         font-size: 30px;
-    }
-
-    #listProjets{
-        flex-direction: column;
-    }
-
-    #listProjets a{
-        margin-bottom: 20px;
     }
 }

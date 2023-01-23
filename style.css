@@ -187,7 +187,7 @@ li a {
 .navbar {
     min-height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 0 24px;
     text-transform: uppercase;
@@ -238,7 +238,7 @@ li a {
     background-size: 300% 300%;
     animation: animeGradient 25s ease infinite;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     color: #F9E6BF;
     padding-top: 70px;
@@ -251,25 +251,32 @@ li a {
     justify-content: center;
     width: 50vw;
     height: calc(100vh - 70px);
-    padding-left: 50px;
+    padding-left: 100px;
 }
 
 #heroName{
-    font-size: 80px;
+    font-size: 120px;
     font-weight: bold;
     animation: 1s ease-out 1s 1 slideInFromUp both;
 }
 
 #heroText{
-    font-size: 24px;
+    font-size: 28px;
     animation: 2s ease-out 2s 1 slideInFromDown both;
 }
 
 #avatar{
-    animation: 1s ease-out 1s 1 slideInFromDown both;
+    position: relative;
+    animation: 1s ease-out 1s 1 slideInFromLeft both;
     width: 50vw;
-    display: flex;
-    justify-content: center;
+    height: calc(100vh - 70px);
+}
+
+#avatar img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 85%;
 }
 
 #down-arrow{
@@ -625,19 +632,23 @@ li a {
     }
 
     #presentation{
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         gap: 30px;
     }
 
     #avatar{
         animation: 1s ease-out 0s 1 slideInFromLeft both;
-        align-self: center;
+        align-self: flex-start;
+        height: 100%;
+        
     }
 
     #avatar img{
         object-fit: cover;
         overflow:hidden;
+        position: relative;
+        height: 100%;
     }
 
 

@@ -8,13 +8,12 @@
   <title>Johnny Joe</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="script.js" defer></script>
 </head>
 
 <body>
-
   <header>
 
     <nav class="navbar">
@@ -28,11 +27,11 @@
         </li>
 
         <li class="nav-item">
-          <a href="#competences" class="nav-link">Compétences</a>
+          <a href="#titleCompetences" class="nav-link">Compétences</a>
         </li>
 
         <li class="nav-item">
-          <a href="#projets" class="nav-link">Projets</a>
+          <a href="#titleProjets" class="nav-link">Projets</a>
         </li>
 
         <li class="nav-item">
@@ -64,7 +63,7 @@
 
       <h1 id="heroName">Fethi,</h1>
 
-      <h4 id="heroText">Actuellement en formation<br>
+      <h4 id="heroText"><br>Actuellement en formation<br>
         de Développeur Web & Web Mobile.<br><br>
         J'ai commencé à coder en 2009<br>
         dans le cadre d'une licence<br>
@@ -85,7 +84,7 @@
 
   <section id="competences" class="flexColumn fullWidth">
 
-    <h1>Mes Compétences :</h1>
+    <h1 id="titleCompetences">Mes Compétences</h1>
 
     <div class="container">
 
@@ -292,7 +291,7 @@
 
   <section id="projets" class="flexColumn fullWidth">
 
-    <h1>Projets Réalisés</h1>
+    <h1 id="titleProjets" class="wow animate__animated animate__fadeInDown" data-wow-duration="2s">Projets Réalisés</h1>
 
     <iframe class="frame" id="marioFrame" src="" name="marioFrame"></iframe>
     <iframe class="frame" id="cineFrame" src="" name="cineFrame"></iframe>
@@ -302,7 +301,7 @@
 
     <div id="listProjets">
 
-      <div class="projetsCard">
+      <div class="projetsCard wow animate__animated animate__fadeInUp">
         <a id="marioFrameBtn" class="frameBtn" href="https://johnnyjohnnyjohn.github.io/Mario/" target="marioFrame">
           <button class="projetsBtn" id="mario">
             <img src="assets/images/mario.gif" alt="" style="width: 50%;">
@@ -315,7 +314,7 @@
         </a>
       </div>
 
-      <div class="projetsCard">
+      <div class="projetsCard wow animate__animated animate__fadeInUp">
         <a id="calcFrameBtn" class="frameBtn" href="https://johnnyjohnnyjohn.github.io/Calculatrice/" target="calcFrame">
           <button class="projetsBtn" id="calc">
             <img src="assets/images/calc.gif" alt="" style="width: 100%;">
@@ -328,7 +327,7 @@
         </a>
       </div>
 
-      <div class="projetsCard">
+      <div class="projetsCard wow animate__animated animate__fadeInUp">
         <a id="cineFrameBtn" class="frameBtn" href="https://johnnyjohnnyjohn.github.io/JohnnyCine/" target="cineFrame">
           <button class="projetsBtn" id="cine">
             <img src="assets/images/bande.gif" alt="" style="height: 100%;border-radius: 20% 0;">
@@ -346,8 +345,10 @@
 
   </section>
 
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+      new WOW().init();
+  </script>
 </body>
 
 </html>

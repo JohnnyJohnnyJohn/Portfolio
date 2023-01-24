@@ -187,9 +187,9 @@ li a {
 .navbar {
     min-height: 70px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding: 0 24px;
+    gap: 24px;
     text-transform: uppercase;
 }
 
@@ -403,7 +403,7 @@ li a {
 
 .inCircle img{
     position: absolute;
-    width: 50px;
+    width: 70px;
     opacity: 0;
     transition: all 1s ease;
     backface-visibility: hidden;
@@ -610,6 +610,11 @@ li a {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .navbar {
+        justify-content: flex-end;
+        padding-right: 24px;
+    }
+
     .nav-menu {
         position: fixed;
         left: 120%;
@@ -638,17 +643,16 @@ li a {
     }
 
     #avatar{
-        animation: 1s ease-out 0s 1 slideInFromLeft both;
-        align-self: flex-start;
+        align-self: center;
         height: 100%;
-        
     }
 
     #avatar img{
         object-fit: cover;
-        overflow:hidden;
         position: relative;
         height: 100%;
+        width: 100%;
+        content:url("assets/images/AvatarSmall.png");
     }
 
 

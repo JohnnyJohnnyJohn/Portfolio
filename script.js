@@ -86,6 +86,7 @@ document.querySelectorAll(".dot").forEach(element => {
   
 document.getElementById("marioFrameBtn").addEventListener('click',function () {
   document.getElementById("marioFrame").className = "open";
+  document.getElementById("marioFrame").focus();
 
   document.getElementById("cineFrame").className = "close";
   document.getElementById("calcFrame").className = "close";

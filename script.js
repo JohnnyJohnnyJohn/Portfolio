@@ -97,6 +97,8 @@ document.getElementById("marioFrameBtn").addEventListener('click',function () {
   document.getElementById("closeBtn").classList.add("actif");
   document.getElementById("closeBtn").style.zIndex = "3000";
 
+  document.body.style.overflow = "hidden";
+
   console.log("mario OK");
 });
 
@@ -111,6 +113,8 @@ document.getElementById("cineFrameBtn").addEventListener('click',function () {
 
   document.getElementById("closeBtn").classList.add("actif");
   document.getElementById("closeBtn").style.zIndex = "3000";
+
+  document.body.style.overflow = "hidden";
 
   console.log("ciné OK");
 });
@@ -127,6 +131,8 @@ document.getElementById("calcFrameBtn").addEventListener('click',function () {
   document.getElementById("closeBtn").classList.add("actif");
   document.getElementById("closeBtn").style.zIndex = "3000";
 
+  document.body.style.overflow = "hidden";
+
   console.log("calc OK");
 });
 
@@ -142,6 +148,8 @@ document.getElementById("closeBtn").addEventListener('click',function () {
 
   document.getElementById("closeBtn").classList.remove("actif");
   document.getElementById("closeBtn").style.zIndex = "1";
+
+  document.body.style.overflow = "scroll";
 
   console.log("close OK");
 });

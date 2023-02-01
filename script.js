@@ -149,7 +149,7 @@ document.getElementById("closeBtn").addEventListener('click',function () {
   document.getElementById("closeBtn").classList.remove("actif");
   document.getElementById("closeBtn").style.zIndex = "1";
 
-  document.body.style.overflow = "scroll";
+  document.body.style.overflow = "auto";
 
   console.log("close OK");
 });

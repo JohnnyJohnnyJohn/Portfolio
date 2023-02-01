@@ -498,7 +498,7 @@ li a {
     background-repeat: no-repeat;
     border-radius: 20px;
     border: none;
-    overflow-y: scroll;
+    overflow-y: auto;
     box-shadow: 0 20px 50px 0 #00000040;
     backface-visibility: hidden;
     transform: scale(0);
@@ -518,7 +518,7 @@ li a {
     background-repeat: no-repeat;
     border-radius: 20px;
     border: none;
-    overflow-y: scroll;
+    overflow-y: auto;
     box-shadow: 0 20px 50px 0 #00000040;
     backface-visibility: hidden;
     transform: scale(0);
@@ -538,7 +538,7 @@ li a {
     background-repeat: no-repeat;
     border-radius: 20px;
     border: none;
-    overflow-y: scroll;
+    overflow-y: auto;
     box-shadow: 0 20px 50px 0 #00000040;
     backface-visibility: hidden;
     transform: scale(0);

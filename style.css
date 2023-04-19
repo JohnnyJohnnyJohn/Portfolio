@@ -198,7 +198,7 @@ li a {
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-    color: #F9E6BF;
+    color: #f7ead2;
 }
 
 .nav-branding img {
@@ -206,7 +206,7 @@ li a {
 }
 
 .nav-link {
-    color: #F9E6BF;
+    color: #f7ead2;
     transition: 0.3s ease;
 }
 
@@ -226,20 +226,21 @@ li a {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background-color: #F9E6BF;
+    background-color: #f7ead2;
 }
 
 /* ------------------PRESENTATION------------------ */
 
 #presentation{
     position: relative;
-    background: linear-gradient(to bottom, #003e63, #0083e6, #dec09c);
+    background: linear-gradient(to bottom, #003e63, #0083e6, #72a2bf);
     background-size: 100% 100%;
+    background-attachment: fixed;
     /* animation: animeGradient 25s ease infinite; */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    color: #F9E6BF;
+    color: #f7ead2;
     padding-top: 70px;
     overflow: hidden;
 }
@@ -426,6 +427,7 @@ li a {
     flex-direction: column; */
     background: linear-gradient(to top, #003e63, #0083e6, #dec09c);
     background-size: 100% 100%;
+    background-attachment: fixed;
     animation: animeGradient 25s ease infinite;
     justify-content: center;
     align-items: center;
@@ -459,7 +461,7 @@ li a {
 }
 
 #projets h1,#projets h2,#projets p{
-    color: #F9E6BF;
+    color: #f7ead2;
 }
 
 #projets h1{

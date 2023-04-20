@@ -172,12 +172,17 @@ header {
 }
 
 footer {
-    font-weight: lighter;
+    font-weight: bold;
     background-color: #2a2a2a;
     background: linear-gradient(to bottom, #333333, #2a2a2a);
     box-shadow: 0 20px 50px 0 #00000040;
     color: #f7ead2;
-    justify-content: center;
+    align-items: center;
+}
+
+footer div a{
+    color: #f7ead2;
+    margin: 0 20px 20px 20px;
 }
 
 footer p {

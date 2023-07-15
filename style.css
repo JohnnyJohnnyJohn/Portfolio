@@ -455,10 +455,11 @@ li a {
     overflow: hidden;
 }
 
-#listProjets{
+.listProjets{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 30px 0;
     width: 100%;
 }
 
@@ -504,6 +505,26 @@ li a {
     width: 200px;
     height: 200px;
     cursor: pointer;
+}
+
+.frame{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 50px);
+    background-color: black;
+    background-image: url("assets/images/bruit.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px 0;
+    border: none;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px 0 #00000040;
+    backface-visibility: hidden;
+    transform: scale(0);
+    z-index: 2000;
 }
 
 #marioFrame{
@@ -566,6 +587,46 @@ li a {
     z-index: 2000;
 }
 
+#autoFrame{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 50px);
+    background-color: black;
+    background-image: url("assets/images/bruit.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px 0;
+    border: none;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px 0 #00000040;
+    backface-visibility: hidden;
+    transform: scale(0);
+    z-index: 2000;
+}
+
+#sellphoneFrame{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 50px);
+    background-color: black;
+    background-image: url("assets/images/bruit.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px 0;
+    border: none;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px 0 #00000040;
+    backface-visibility: hidden;
+    transform: scale(0);
+    z-index: 2000;
+}
+
 #cine{
     background-image: url("assets/images/cine.gif");
     background-size: auto 90%;
@@ -574,6 +635,18 @@ li a {
 
 #calc{
     background-image: url("assets/images/math.jpg");
+    background-size: auto 100%;
+    background-position: center;
+}
+
+#auto{
+    background-image: url("assets/images/auto.gif");
+    background-size: auto 100%;
+    background-position: center;
+}
+
+#sellphone{
+    background-image: url("assets/images/background.jpg");
     background-size: auto 100%;
     background-position: center;
 }
@@ -720,13 +793,13 @@ li a {
         font-size: 20px;
     }
 
-    #listProjets{
+    .listProjets{
         flex-direction: column;
         align-items: center;
         gap: 40px;
     }
 
-    #listProjets a{
+    .listProjets a{
         margin-bottom: 20px;
     }
 }

@@ -31,13 +31,14 @@ percents.forEach(element => {
 
 window.onscroll = () => animeCompetences();
 
-window.onload = () => animeCompetences();
-
-window.onload = () => document.getElementById("marioFrame").setAttribute("src", "");
-
-window.onload = () => document.getElementById("cineFrame").setAttribute("src", "");
-
-window.onload = () => document.getElementById("calcFrame").setAttribute("src", "");
+window.onload = () => {
+  animeCompetences();
+  document.getElementById("marioFrame").setAttribute("src", "");
+  document.getElementById("cineFrame").setAttribute("src", "");
+  document.getElementById("calcFrame").setAttribute("src", "");
+  document.getElementById("autoFrame").setAttribute("src", "");
+  document.getElementById("sellphoneFrame").setAttribute("src", "");
+}
 
 function animeCompetences () {
 
@@ -90,9 +91,13 @@ document.getElementById("marioFrameBtn").addEventListener('click',function () {
 
   document.getElementById("cineFrame").className = "close";
   document.getElementById("calcFrame").className = "close";
+  document.getElementById("autoFrame").className = "close";
+  document.getElementById("sellphoneFrame").className = "close";
 
   document.getElementById("cineFrame").setAttribute("src", "");
   document.getElementById("calcFrame").setAttribute("src", "");
+  document.getElementById("autoFrame").setAttribute("src", "");
+  document.getElementById("sellphoneFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
   document.getElementById("closeBtn").style.zIndex = "3000";
@@ -104,12 +109,17 @@ document.getElementById("marioFrameBtn").addEventListener('click',function () {
 
 document.getElementById("cineFrameBtn").addEventListener('click',function () {
   document.getElementById("cineFrame").className = "open";
+  document.getElementById("cineFrame").focus();
 
   document.getElementById("marioFrame").className = "close";
   document.getElementById("calcFrame").className = "close";
+  document.getElementById("autoFrame").className = "close";
+  document.getElementById("sellphoneFrame").className = "close";
 
   document.getElementById("marioFrame").setAttribute("src", "");
   document.getElementById("calcFrame").setAttribute("src", "");
+  document.getElementById("autoFrame").setAttribute("src", "");
+  document.getElementById("sellphoneFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
   document.getElementById("closeBtn").style.zIndex = "3000";
@@ -121,12 +131,17 @@ document.getElementById("cineFrameBtn").addEventListener('click',function () {
 
 document.getElementById("calcFrameBtn").addEventListener('click',function () {
   document.getElementById("calcFrame").className = "open";
+  document.getElementById("calcFrame").focus();
 
   document.getElementById("marioFrame").className = "close";
   document.getElementById("cineFrame").className = "close";
+  document.getElementById("autoFrame").className = "close";
+  document.getElementById("sellphoneFrame").className = "close";
 
   document.getElementById("marioFrame").setAttribute("src", "");
   document.getElementById("cineFrame").setAttribute("src", "");
+  document.getElementById("autoFrame").setAttribute("src", "");
+  document.getElementById("sellphoneFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.add("actif");
   document.getElementById("closeBtn").style.zIndex = "3000";
@@ -134,6 +149,50 @@ document.getElementById("calcFrameBtn").addEventListener('click',function () {
   document.body.style.overflow = "hidden";
 
   console.log("calc OK");
+});
+
+document.getElementById("autoFrameBtn").addEventListener('click',function () {
+  document.getElementById("autoFrame").className = "open";
+  document.getElementById("autoFrame").focus();
+
+  document.getElementById("marioFrame").className = "close";
+  document.getElementById("cineFrame").className = "close";
+  document.getElementById("calcFrame").className = "close";
+  document.getElementById("sellphoneFrame").className = "close";
+
+  document.getElementById("marioFrame").setAttribute("src", "");
+  document.getElementById("cineFrame").setAttribute("src", "");
+  document.getElementById("calcFrame").setAttribute("src", "");
+  document.getElementById("sellphoneFrame").setAttribute("src", "");
+
+  document.getElementById("closeBtn").classList.add("actif");
+  document.getElementById("closeBtn").style.zIndex = "3000";
+
+  document.body.style.overflow = "hidden";
+
+  console.log("auto OK");
+});
+
+document.getElementById("sellphoneFrameBtn").addEventListener('click',function () {
+  document.getElementById("sellphoneFrame").className = "open";
+  document.getElementById("sellphoneFrame").focus();
+
+  document.getElementById("marioFrame").className = "close";
+  document.getElementById("cineFrame").className = "close";
+  document.getElementById("calcFrame").className = "close";
+  document.getElementById("autoFrame").className = "close";
+
+  document.getElementById("marioFrame").setAttribute("src", "");
+  document.getElementById("cineFrame").setAttribute("src", "");
+  document.getElementById("calcFrame").setAttribute("src", "");
+  document.getElementById("autoFrame").setAttribute("src", "");
+
+  document.getElementById("closeBtn").classList.add("actif");
+  document.getElementById("closeBtn").style.zIndex = "3000";
+
+  document.body.style.overflow = "hidden";
+
+  console.log("auto OK");
 });
 
 document.getElementById("closeBtn").addEventListener('click',function () {
@@ -145,6 +204,12 @@ document.getElementById("closeBtn").addEventListener('click',function () {
 
   document.getElementById("calcFrame").className = "close";
   document.getElementById("calcFrame").setAttribute("src", "");
+
+  document.getElementById("autoFrame").className = "close";
+  document.getElementById("autoFrame").setAttribute("src", "");
+
+  document.getElementById("sellphoneFrame").className = "close";
+  document.getElementById("sellphoneFrame").setAttribute("src", "");
 
   document.getElementById("closeBtn").classList.remove("actif");
   document.getElementById("closeBtn").style.zIndex = "1";

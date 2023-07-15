@@ -509,110 +509,10 @@ li a {
 
 .frame{
     position: fixed;
-    top: 25px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    height: calc(100vh - 50px);
-    background-color: black;
-    background-image: url("assets/images/bruit.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px 0;
-    border: none;
-    overflow-y: auto;
-    box-shadow: 0 20px 50px 0 #00000040;
-    backface-visibility: hidden;
-    transform: scale(0);
-    z-index: 2000;
-}
-
-#marioFrame{
-    position: fixed;
-    top: 25px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    height: calc(100vh - 50px);
-    background-color: black;
-    background-image: url("assets/images/bruit.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px 0;
-    border: none;
-    overflow-y: auto;
-    box-shadow: 0 20px 50px 0 #00000040;
-    backface-visibility: hidden;
-    transform: scale(0);
-    z-index: 2000;
-}
-
-#cineFrame{
-    position: fixed;
-    top: 25px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    height: calc(100vh - 50px);
-    background-color: black;
-    background-image: url("assets/images/bruit.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px 0;
-    border: none;
-    overflow-y: auto;
-    box-shadow: 0 20px 50px 0 #00000040;
-    backface-visibility: hidden;
-    transform: scale(0);
-    z-index: 2000;
-}
-
-#calcFrame{
-    position: fixed;
-    top: 25px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    height: calc(100vh - 50px);
-    background-color: black;
-    background-image: url("assets/images/bruit.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px 0;
-    border: none;
-    overflow-y: auto;
-    box-shadow: 0 20px 50px 0 #00000040;
-    backface-visibility: hidden;
-    transform: scale(0);
-    z-index: 2000;
-}
-
-#autoFrame{
-    position: fixed;
-    top: 25px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    height: calc(100vh - 50px);
-    background-color: black;
-    background-image: url("assets/images/bruit.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px 0;
-    border: none;
-    overflow-y: auto;
-    box-shadow: 0 20px 50px 0 #00000040;
-    backface-visibility: hidden;
-    transform: scale(0);
-    z-index: 2000;
-}
-
-#sellphoneFrame{
-    position: fixed;
-    top: 25px;
-    left: 25px;
-    width: calc(100vw - 50px);
-    height: calc(100vh - 50px);
+    top: 5px;
+    left: 5px;
+    width: calc(100vw - 10px);
+    height: calc(100vh - 10px);
     background-color: black;
     background-image: url("assets/images/bruit.gif");
     background-size: cover;
@@ -651,6 +551,14 @@ li a {
     background-position: center;
 }
 
+#certifeo{
+    background-image: url("assets/images/certifeoback.gif");
+    background-size: auto 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #9AC4F8;
+}
+
 .frameBtn{
     text-align: center;
     text-decoration: none;
@@ -658,15 +566,16 @@ li a {
 }
 
 #closeBtn{
-    top: 30px;
-    left: calc(100vw - 80px);
+    top: 7px;
+    left: calc(100vw - 55px);
     position: fixed;
     z-index: 2001;
     cursor: pointer;
     opacity: 0;
     transition: all 1s ease;
-    filter: invert(100%);
     z-index: 1;
+    background-color: red;
+    border-radius: 8px 0;
 }
 
 .actif{

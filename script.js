@@ -84,137 +84,41 @@ document.querySelectorAll(".dot").forEach(element => {
     element.parentElement.children[2].children[1].classList.add("flip");
   });
 });
+
+document.querySelectorAll(".frameBtn").forEach(element => {
+  element.addEventListener('click',function () {
+    console.table(document.querySelectorAll(".frame"));
+    document.querySelectorAll(".frame").forEach(frame => {
+      if (frame.id == element.target) {
+        frame.classList.add("open");
+        frame.classList.remove("close");
+        frame.focus();
+      } else {
+        frame.classList.add("close");
+        frame.classList.remove("open");
+        frame.setAttribute("src", "");
+      }
+
+      document.getElementById("closeBtn").classList.add("actif");
+      document.getElementById("closeBtn").style.zIndex = "3000";
+    
+      document.body.style.overflow = "hidden";
+    });
+  });
+});
+
+document.querySelector("#closeBtn").addEventListener('click', () => {
+  console.table(document.querySelectorAll(".frame"));
+  document.querySelectorAll(".frame").forEach(frame => {
+    console.log("ok");
+    frame.classList.add("close");
+    frame.classList.remove("open");
+    frame.setAttribute("src", "");
+
+    document.getElementById("closeBtn").classList.remove("actif");
+    document.getElementById("closeBtn").style.zIndex = "1";
   
-document.getElementById("marioFrameBtn").addEventListener('click',function () {
-  document.getElementById("marioFrame").className = "open";
-  document.getElementById("marioFrame").focus();
-
-  document.getElementById("cineFrame").className = "close";
-  document.getElementById("calcFrame").className = "close";
-  document.getElementById("autoFrame").className = "close";
-  document.getElementById("sellphoneFrame").className = "close";
-
-  document.getElementById("cineFrame").setAttribute("src", "");
-  document.getElementById("calcFrame").setAttribute("src", "");
-  document.getElementById("autoFrame").setAttribute("src", "");
-  document.getElementById("sellphoneFrame").setAttribute("src", "");
-
-  document.getElementById("closeBtn").classList.add("actif");
-  document.getElementById("closeBtn").style.zIndex = "3000";
-
-  document.body.style.overflow = "hidden";
-
-  console.log("mario OK");
-});
-
-document.getElementById("cineFrameBtn").addEventListener('click',function () {
-  document.getElementById("cineFrame").className = "open";
-  document.getElementById("cineFrame").focus();
-
-  document.getElementById("marioFrame").className = "close";
-  document.getElementById("calcFrame").className = "close";
-  document.getElementById("autoFrame").className = "close";
-  document.getElementById("sellphoneFrame").className = "close";
-
-  document.getElementById("marioFrame").setAttribute("src", "");
-  document.getElementById("calcFrame").setAttribute("src", "");
-  document.getElementById("autoFrame").setAttribute("src", "");
-  document.getElementById("sellphoneFrame").setAttribute("src", "");
-
-  document.getElementById("closeBtn").classList.add("actif");
-  document.getElementById("closeBtn").style.zIndex = "3000";
-
-  document.body.style.overflow = "hidden";
-
-  console.log("ciné OK");
-});
-
-document.getElementById("calcFrameBtn").addEventListener('click',function () {
-  document.getElementById("calcFrame").className = "open";
-  document.getElementById("calcFrame").focus();
-
-  document.getElementById("marioFrame").className = "close";
-  document.getElementById("cineFrame").className = "close";
-  document.getElementById("autoFrame").className = "close";
-  document.getElementById("sellphoneFrame").className = "close";
-
-  document.getElementById("marioFrame").setAttribute("src", "");
-  document.getElementById("cineFrame").setAttribute("src", "");
-  document.getElementById("autoFrame").setAttribute("src", "");
-  document.getElementById("sellphoneFrame").setAttribute("src", "");
-
-  document.getElementById("closeBtn").classList.add("actif");
-  document.getElementById("closeBtn").style.zIndex = "3000";
-
-  document.body.style.overflow = "hidden";
-
-  console.log("calc OK");
-});
-
-document.getElementById("autoFrameBtn").addEventListener('click',function () {
-  document.getElementById("autoFrame").className = "open";
-  document.getElementById("autoFrame").focus();
-
-  document.getElementById("marioFrame").className = "close";
-  document.getElementById("cineFrame").className = "close";
-  document.getElementById("calcFrame").className = "close";
-  document.getElementById("sellphoneFrame").className = "close";
-
-  document.getElementById("marioFrame").setAttribute("src", "");
-  document.getElementById("cineFrame").setAttribute("src", "");
-  document.getElementById("calcFrame").setAttribute("src", "");
-  document.getElementById("sellphoneFrame").setAttribute("src", "");
-
-  document.getElementById("closeBtn").classList.add("actif");
-  document.getElementById("closeBtn").style.zIndex = "3000";
-
-  document.body.style.overflow = "hidden";
-
-  console.log("auto OK");
-});
-
-document.getElementById("sellphoneFrameBtn").addEventListener('click',function () {
-  document.getElementById("sellphoneFrame").className = "open";
-  document.getElementById("sellphoneFrame").focus();
-
-  document.getElementById("marioFrame").className = "close";
-  document.getElementById("cineFrame").className = "close";
-  document.getElementById("calcFrame").className = "close";
-  document.getElementById("autoFrame").className = "close";
-
-  document.getElementById("marioFrame").setAttribute("src", "");
-  document.getElementById("cineFrame").setAttribute("src", "");
-  document.getElementById("calcFrame").setAttribute("src", "");
-  document.getElementById("autoFrame").setAttribute("src", "");
-
-  document.getElementById("closeBtn").classList.add("actif");
-  document.getElementById("closeBtn").style.zIndex = "3000";
-
-  document.body.style.overflow = "hidden";
-
-  console.log("auto OK");
-});
-
-document.getElementById("closeBtn").addEventListener('click',function () {
-  document.getElementById("marioFrame").className = "close";
-  document.getElementById("marioFrame").setAttribute("src", "");
-
-  document.getElementById("cineFrame").className = "close";
-  document.getElementById("cineFrame").setAttribute("src", "");
-
-  document.getElementById("calcFrame").className = "close";
-  document.getElementById("calcFrame").setAttribute("src", "");
-
-  document.getElementById("autoFrame").className = "close";
-  document.getElementById("autoFrame").setAttribute("src", "");
-
-  document.getElementById("sellphoneFrame").className = "close";
-  document.getElementById("sellphoneFrame").setAttribute("src", "");
-
-  document.getElementById("closeBtn").classList.remove("actif");
-  document.getElementById("closeBtn").style.zIndex = "1";
-
-  document.body.style.overflow = "auto";
-
-  console.log("close OK");
+    document.body.style.overflow = "auto";
+    
+  });
 });

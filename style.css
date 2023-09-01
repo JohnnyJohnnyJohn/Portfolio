@@ -321,7 +321,7 @@ li a {
     align-items: center;
     background-color: #2a2a2a;
     background: linear-gradient(to bottom, #323232, #2a2a2a);
-    padding: 40px 0;
+    padding: 100px 0;
     overflow: hidden;
 }
 
@@ -451,7 +451,7 @@ li a {
     justify-content: center;
     align-items: center;
     /* width: 100vw; */
-    padding: 40px 0;
+    padding: 100px 0;
     overflow: hidden;
 }
 
@@ -467,7 +467,12 @@ li a {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 400px; 
+    width: 400px;
+    transition: all 0.3s ease;
+}
+
+.projetsCard:hover{
+    transform: scale(1.1);
 }
 
 .newWindow{
@@ -574,15 +579,14 @@ li a {
     opacity: 0;
     transition: all 1s ease;
     z-index: 1;
-    background-color: red;
+    background-color: #D61B1B;
+    background-image: linear-gradient(172deg, #ffffff37, #ffffff28, #ffffff19, #ffffff10, #ffffff01);
     border-radius: 8px 0;
 }
 
 .actif{
     animation: fadeIn 0.3s 0.7s linear both;
 }
-
-
 
 .open{
     animation: open 1s linear both;

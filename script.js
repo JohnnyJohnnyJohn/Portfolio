@@ -87,7 +87,7 @@ document.querySelectorAll(".dot").forEach(element => {
 
 document.querySelectorAll(".frameBtn").forEach(element => {
   element.addEventListener('click',function () {
-    console.table(document.querySelectorAll(".frame"));
+    console.log(element.target);
     document.querySelectorAll(".frame").forEach(frame => {
       if (frame.id == element.target) {
         frame.classList.add("open");
@@ -97,6 +97,13 @@ document.querySelectorAll(".frameBtn").forEach(element => {
         frame.classList.add("close");
         frame.classList.remove("open");
         frame.setAttribute("src", "");
+      }
+
+      if(frame.id == "certifeoFrame"){
+        setTimeout(() => {
+          console.log(frame);
+          frame.style.background = "white";
+        }, 1000);        
       }
 
       document.getElementById("closeBtn").classList.add("actif");
@@ -110,10 +117,17 @@ document.querySelectorAll(".frameBtn").forEach(element => {
 document.querySelector("#closeBtn").addEventListener('click', () => {
   console.table(document.querySelectorAll(".frame"));
   document.querySelectorAll(".frame").forEach(frame => {
-    console.log("ok");
+    
     frame.classList.add("close");
     frame.classList.remove("open");
     frame.setAttribute("src", "");
+
+    if(frame.id == "certifeoFrame"){
+        frame.style.backgroundImage = "url('assets/images/bruit.gif')";       
+        frame.style.backgroundSize = "cover";       
+        frame.style.backgroundPosition = "center";       
+        frame.style.backgroundRepeat = "no-repeat";       
+    }
 
     document.getElementById("closeBtn").classList.remove("actif");
     document.getElementById("closeBtn").style.zIndex = "1";

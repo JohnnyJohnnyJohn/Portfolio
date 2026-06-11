@@ -1,8 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
 @import "tw-animate-css";
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/649dc29d04a5c2f38d17b0eb_PPNeueMontreal-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/649dc29276d96805fd7a9242_PPNeueMontreal-Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -51,6 +69,29 @@
 }
 
 :root {
+  --portfolio-bg: #080808;
+  --portfolio-bg-soft: #101010;
+  --portfolio-bg-deep: #050505;
+  --portfolio-panel: #0b0b0b;
+  --portfolio-card: #121212;
+  --portfolio-surface: #111111;
+  --portfolio-surface-deep: #101010;
+  --portfolio-surface-strong: #171717;
+  --portfolio-fg: #f5f5f0;
+  --portfolio-readable: #c8c8bf;
+  --portfolio-soft: #bdbdb5;
+  --portfolio-muted: #a7a7a0;
+  --portfolio-subtle: #8b8b84;
+  --portfolio-dim: #777770;
+  --portfolio-accent: #ededdf;
+  --portfolio-icon: #d9d9d0;
+  --portfolio-preview: #d7d7cb;
+  --portfolio-dot-dark: #4f4f4a;
+  --portfolio-dot-mid: #62625b;
+  --portfolio-dot-light: #77776e;
+  --portfolio-border: rgba(255, 255, 255, 0.1);
+  --portfolio-border-soft: rgba(255, 255, 255, 0.08);
+
   --sea-ink: #173a40;
   --sea-ink-soft: #416166;
   --lagoon: #4fb8b2;
@@ -162,7 +203,29 @@
 }
 
 @theme inline {
-  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Neue Montreal", ui-sans-serif, system-ui, sans-serif;
+  --color-portfolio-bg: var(--portfolio-bg);
+  --color-portfolio-bg-soft: var(--portfolio-bg-soft);
+  --color-portfolio-bg-deep: var(--portfolio-bg-deep);
+  --color-portfolio-panel: var(--portfolio-panel);
+  --color-portfolio-card: var(--portfolio-card);
+  --color-portfolio-surface: var(--portfolio-surface);
+  --color-portfolio-surface-deep: var(--portfolio-surface-deep);
+  --color-portfolio-surface-strong: var(--portfolio-surface-strong);
+  --color-portfolio-fg: var(--portfolio-fg);
+  --color-portfolio-readable: var(--portfolio-readable);
+  --color-portfolio-soft: var(--portfolio-soft);
+  --color-portfolio-muted: var(--portfolio-muted);
+  --color-portfolio-subtle: var(--portfolio-subtle);
+  --color-portfolio-dim: var(--portfolio-dim);
+  --color-portfolio-accent: var(--portfolio-accent);
+  --color-portfolio-icon: var(--portfolio-icon);
+  --color-portfolio-preview: var(--portfolio-preview);
+  --color-portfolio-dot-dark: var(--portfolio-dot-dark);
+  --color-portfolio-dot-mid: var(--portfolio-dot-mid);
+  --color-portfolio-dot-light: var(--portfolio-dot-light);
+  --color-portfolio-border: var(--portfolio-border);
+  --color-portfolio-border-soft: var(--portfolio-border-soft);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -206,7 +269,41 @@ body,
 #app {
   min-height: 100%;
   overflow-x: clip;
+  scrollbar-color: rgba(242, 242, 242, 0.28) var(--portfolio-bg);
+  scrollbar-width: thin;
   scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: linear-gradient(
+    180deg,
+    var(--portfolio-bg-soft),
+    var(--portfolio-bg-deep)
+  );
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(242, 242, 242, 0.34),
+    rgba(242, 242, 242, 0.12)
+  );
+  border: 2px solid var(--portfolio-bg);
+  border-radius: 999px;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.08);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(242, 242, 242, 0.48),
+    rgba(242, 242, 242, 0.2)
+  );
 }
 
 html {
@@ -219,8 +316,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #080808;
-  color: #f4efe6;
+  background-color: var(--portfolio-bg);
+  color: var(--portfolio-fg);
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -232,6 +329,28 @@ a {
 }
 
 ::selection {
-  background: #ededdf;
-  color: #080808;
+  background: var(--portfolio-accent);
+  color: var(--portfolio-bg);
+}
+
+.scroll-anim {
+  animation: fadeIn 2s ease-in-out infinite alternate;
+  opacity: 50%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 50%;
+    transform: translateY(-20);
+  }
+
+  50% {
+    opacity: 100%;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 30%;
+    transform: translateY(-20);
+  }
 }

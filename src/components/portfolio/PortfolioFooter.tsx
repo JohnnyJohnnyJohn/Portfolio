@@ -18,7 +18,7 @@ export function PortfolioFooter({ onViewChange }: PortfolioFooterProps) {
 						key={option.value}
 						type="button"
 						onClick={() => onViewChange(option.value)}
-						className="mr-4 transition-colors last:mr-0 hover:text-white"
+						className="mr-4 transition-colors last:mr-0 md:hover:text-white"
 					>
 						{option.label}
 					</button>
@@ -26,7 +26,7 @@ export function PortfolioFooter({ onViewChange }: PortfolioFooterProps) {
 			</div>
 			<div className="sm:text-right">
 				<p className="mb-2 text-portfolio-soft">CONTACT</p>
-				<a href={`mailto:${profile.email}`} className="hover:text-white">
+				<a href={`mailto:${profile.email}`} className="md:hover:text-white">
 					{profile.email}
 				</a>
 				<p className="mt-6">© 2026 {profile.name}. All Rights Reserved.</p>

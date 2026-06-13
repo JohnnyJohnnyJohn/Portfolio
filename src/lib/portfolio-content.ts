@@ -12,7 +12,13 @@ export type Project = {
 	description: string;
 	thumbnail: string;
 	glow: string;
+	borderGlow: BorderGlowTheme;
 	href?: string;
+};
+
+export type BorderGlowTheme = {
+	glowColor: string;
+	colors: string[];
 };
 
 export type TimelineItem = {
@@ -39,6 +45,11 @@ export const viewOptions: ViewOption[] = [
 	{ value: "info", label: "Info" },
 ];
 
+export const heroBorderGlow: BorderGlowTheme = {
+	glowColor: "0 0 92",
+	colors: ["#f2f2f2", "#aeb4c2", "#7a7481"],
+};
+
 export const projects: Project[] = [
 	{
 		name: "Sea Edge",
@@ -47,7 +58,11 @@ export const projects: Project[] = [
 		description:
 			"Shaping a maritime operations interface around reusable React/MUI components for planning, crews, vessels and maintenance.",
 		thumbnail: "/sea-edge.png",
-		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(137,185,212,.42),transparent_62%),radial-gradient(circle_at_50%_0,rgba(146,203,183,.24),transparent_68%),radial-gradient(circle_at_50%_0,rgba(14,37,53,.65),transparent)]",
+		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(137,185,212,.78),transparent_58%),radial-gradient(circle_at_50%_0,rgba(146,203,183,.42),transparent_68%),radial-gradient(circle_at_50%_0,rgba(14,37,53,.88),transparent)]",
+		borderGlow: {
+			glowColor: "196 64 78",
+			colors: ["#89b9d4", "#92cbb7", "#0e2535"],
+		},
 	},
 	{
 		name: "Devver",
@@ -57,7 +72,11 @@ export const projects: Project[] = [
 			"Helping product teams validate branches in seconds through preview URLs, a React dashboard and contextual feedback overlay.",
 		href: "https://devver.app",
 		thumbnail: "/devver.png",
-		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(52,211,153,.22),transparent_62%),radial-gradient(circle_at_50%_0,rgba(137,119,68,.2),transparent_70%),radial-gradient(circle_at_50%_0,rgba(37,37,37,.74),transparent)]",
+		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(52,211,153,.46),transparent_60%),radial-gradient(circle_at_50%_0,rgba(137,119,68,.34),transparent_70%),radial-gradient(circle_at_50%_0,rgba(37,37,37,.9),transparent)]",
+		borderGlow: {
+			glowColor: "156 67 58",
+			colors: ["#34d399", "#897744", "#252525"],
+		},
 	},
 	{
 		name: "Oreus",
@@ -67,7 +86,11 @@ export const projects: Project[] = [
 			"Building the service layer behind a sovereign AI platform: organizations, permissions, storage, AI agents and MCP-ready workflows.",
 		href: "https://oreus.ai",
 		thumbnail: "/oreus.png",
-		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(116,132,155,.3),transparent_64%),radial-gradient(circle_at_50%_0,rgba(143,118,117,.22),transparent_72%),radial-gradient(circle_at_50%_0,rgba(23,23,25,.78),transparent)]",
+		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(116,132,155,.52),transparent_60%),radial-gradient(circle_at_50%_0,rgba(143,118,117,.36),transparent_72%),radial-gradient(circle_at_50%_0,rgba(23,23,25,.9),transparent)]",
+		borderGlow: {
+			glowColor: "216 18 64",
+			colors: ["#74849b", "#8f7675", "#171719"],
+		},
 	},
 	{
 		name: "ALLinOne RH",
@@ -77,7 +100,11 @@ export const projects: Project[] = [
 			"Improving an AI-powered recruiting platform across candidate journeys, recruiter workflows, ATS integrations and operational dashboards.",
 		href: "https://allinonerh.ai",
 		thumbnail: "/aio.png",
-		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(106,107,224,.32),transparent_62%),radial-gradient(circle_at_50%_0,rgba(126,142,214,.24),transparent_70%),radial-gradient(circle_at_50%_0,rgba(206,155,118,.18),transparent)]",
+		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(106,107,224,.6),transparent_58%),radial-gradient(circle_at_50%_0,rgba(126,142,214,.38),transparent_70%),radial-gradient(circle_at_50%_0,rgba(206,155,118,.28),transparent)]",
+		borderGlow: {
+			glowColor: "239 66 65",
+			colors: ["#6a6be0", "#7e8ed6", "#ce9b76"],
+		},
 	},
 	{
 		name: "MyShop",
@@ -86,7 +113,11 @@ export const projects: Project[] = [
 		description:
 			"Turning industrial tool management into traceable workflows for Airbus teams, with requests, roles, KPIs, notifications and exports.",
 		thumbnail: "/myshop.png",
-		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(88,103,139,.26),transparent_64%),radial-gradient(circle_at_50%_0,rgba(177,184,201,.16),transparent_74%),radial-gradient(circle_at_50%_0,rgba(22,43,93,.72),transparent)]",
+		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(88,103,139,.46),transparent_60%),radial-gradient(circle_at_50%_0,rgba(177,184,201,.28),transparent_74%),radial-gradient(circle_at_50%_0,rgba(22,43,93,.9),transparent)]",
+		borderGlow: {
+			glowColor: "223 62 37",
+			colors: ["#58678b", "#b1b8c9", "#162b5d"],
+		},
 	},
 	{
 		name: "IziLife",
@@ -96,7 +127,11 @@ export const projects: Project[] = [
 			"Designing a platform where accessibility solutions, discussions and resources become easier to share, discover and maintain.",
 		href: "https://izilife.fr",
 		thumbnail: "/izilife.png",
-		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(131,102,152,.34),transparent_62%),radial-gradient(circle_at_50%_0,rgba(236,72,153,.18),transparent_72%),radial-gradient(circle_at_50%_0,rgba(75,51,87,.48),transparent)]",
+		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(131,102,152,.62),transparent_58%),radial-gradient(circle_at_50%_0,rgba(236,72,153,.3),transparent_72%),radial-gradient(circle_at_50%_0,rgba(75,51,87,.74),transparent)]",
+		borderGlow: {
+			glowColor: "279 22 58",
+			colors: ["#836698", "#ec4899", "#4b3357"],
+		},
 	},
 ];
 

@@ -11,3 +11,6 @@ dist-ssr
 .vinxi
 __unconfig*
 todos.json
+
+# devver local secrets (deployment-specific env vars)
+.devver/

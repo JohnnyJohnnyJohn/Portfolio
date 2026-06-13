@@ -18,7 +18,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <a
         href={project.href}
         aria-label={`Open ${project.name}`}
-        className="relative flex h-auto flex-col gap-12 overflow-hidden rounded-2xl border border-[#3d3d3d] bg-[linear-gradient(190deg,#252525,#101010)] px-6 pt-6.5 text-[#f2f2f2] no-underline transition-colors duration-400 md:h-147 md:gap-14 md:px-7 md:pt-8 md:hover:border-[#888] min-[1440px]:h-174 min-[1440px]:gap-16 min-[1440px]:px-8 min-[1440px]:pt-9 min-[1920px]:h-240 min-[1920px]:gap-22 min-[1920px]:rounded-3xl min-[1920px]:px-11 min-[1920px]:pt-11"
+        className="relative flex h-auto flex-col gap-12 overflow-hidden rounded-2xl [clip-path:inset(0_round_1rem)] border border-[#3d3d3d] bg-[linear-gradient(190deg,#252525,#101010)] px-6 pt-6.5 text-[#f2f2f2] no-underline transition-colors duration-400 md:h-147 md:gap-14 md:px-7 md:pt-8 md:hover:border-[#888] min-[1440px]:h-174 min-[1440px]:gap-16 min-[1440px]:px-8 min-[1440px]:pt-9 min-[1920px]:h-240 min-[1920px]:gap-22 min-[1920px]:rounded-3xl min-[1920px]:[clip-path:inset(0_round_1.5rem)] min-[1920px]:px-11 min-[1920px]:pt-11"
       >
         <div
           className={`pointer-events-none absolute inset-[-18%] opacity-100 blur-2xl saturate-150 transition-[opacity,transform,filter] duration-700 md:opacity-0 md:blur-3xl md:group-hover:scale-105 md:group-hover:opacity-100 ${project.glow}`}

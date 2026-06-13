@@ -1,36 +1,72 @@
 import {
-	type PortfolioView,
-	profile,
-	viewOptions,
+  type PortfolioView,
+  profile,
+  viewOptions,
 } from "#/lib/portfolio-content";
 
+import { ArrowUpRight } from "lucide-react";
+
 type PortfolioFooterProps = {
-	onViewChange: (view: PortfolioView) => void;
+  onViewChange: (view: PortfolioView) => void;
 };
 
 export function PortfolioFooter({ onViewChange }: PortfolioFooterProps) {
-	return (
-		<footer className="relative z-10 mx-auto grid max-w-6xl gap-8 border-portfolio-border border-t px-5 py-10 text-xs text-portfolio-dim sm:grid-cols-[1fr_auto] sm:px-8">
-			<div>
-				<p className="mb-2 text-portfolio-soft">MAIN</p>
-				{viewOptions.map((option) => (
-					<button
-						key={option.value}
-						type="button"
-						onClick={() => onViewChange(option.value)}
-						className="mr-4 transition-colors last:mr-0 md:hover:text-white"
-					>
-						{option.label}
-					</button>
-				))}
-			</div>
-			<div className="sm:text-right">
-				<p className="mb-2 text-portfolio-soft">CONTACT</p>
-				<a href={`mailto:${profile.email}`} className="md:hover:text-white">
-					{profile.email}
-				</a>
-				<p className="mt-6">© 2026 {profile.name}. All Rights Reserved.</p>
-			</div>
-		</footer>
-	);
+  return (
+    <footer className="relative z-10 flex justify-center border-portfolio-border border-t px-4 pt-16 pb-12 text-[#f2f2f2] md:px-6 md:pt-22 md:pb-20 lg:px-0">
+      <div className="flex w-full max-w-220.5 flex-col gap-12 md:gap-16">
+        <div className="flex items-start justify-between">
+          <div className="flex gap-4 md:gap-12">
+            <div className="flex w-24 flex-col items-start gap-3 md:w-26.5 md:gap-4">
+              <p className="text-[9px] leading-3.25 tracking-[1.5px] text-[#f2f2f2]/50">
+                MAIN
+              </p>
+              <div className="flex flex-col gap-2">
+                {viewOptions.map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    onClick={() => onViewChange(option.value)}
+                    className="flex h-10 w-24 items-center text-left text-base leading-5 tracking-[.2px] text-[#f2f2f2] font-semibold cursor-pointer md:w-26.5"
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex w-24 flex-col items-start gap-3 md:w-26.5 md:gap-4">
+              <p className="text-[9px] leading-3.25 tracking-[1.5px] text-[#f2f2f2]/50">
+                CONTACT
+              </p>
+              <div className="flex flex-col gap-2">
+                <a
+                  href={profile.linkedinHref}
+                  className="flex h-10 w-24 items-center text-base leading-5 tracking-[.2px] text-[#f2f2f2] font-semibold cursor-pointer md:w-26.5"
+                >
+                  LinkedIn{" "}
+                  <ArrowUpRight className="ml-1.5" size={22} strokeWidth={2} />
+                </a>
+                <a
+                  href={profile.resumeHref}
+                  className="flex h-10 w-24 items-center text-base leading-5 tracking-[.2px] text-[#f2f2f2] font-semibold cursor-pointer md:w-26.5"
+                >
+                  Resume{" "}
+                  <ArrowUpRight className="ml-1.5" size={22} strokeWidth={2} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-end gap-2 tracking-[.2px] w-full md:gap-1">
+          <p className="text-sm font-semibold leading-4.5 md:text-base md:leading-6">
+            © 2026 {profile.name}. All Rights Reserved.
+          </p>
+          <p className="text-xs leading-4 text-[#f2f2f2]/50 md:text-sm md:leading-5">
+            Made with care in Marseille.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 }

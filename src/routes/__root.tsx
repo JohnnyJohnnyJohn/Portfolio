@@ -1,8 +1,19 @@
-import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import {
+	createRootRoute,
+	HeadContent,
+	Outlet,
+	Scripts,
+	useLocation,
+} from "@tanstack/react-router";
+import type { ReactNode } from "react";
+
+import { PortfolioLayout, PortfolioNotFound } from "#/components/portfolio";
+import type { PortfolioView } from "#/lib/portfolio-content";
 
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
+	component: RootComponent,
 	head: () => ({
 		meta: [
 			{
@@ -23,25 +34,10 @@ export const Route = createRootRoute({
 		],
 		links: [
 			{
-				rel: "apple-touch-icon",
-				sizes: "180x180",
-				href: "/apple-touch-icon.png",
-			},
-			{
 				rel: "icon",
-				type: "image/png",
-				sizes: "32x32",
-				href: "/favicon-32x32.png",
-			},
-			{
-				rel: "icon",
-				type: "image/png",
-				sizes: "16x16",
-				href: "/favicon-16x16.png",
-			},
-			{
-				rel: "manifest",
-				href: "/site.webmanifest",
+				type: "image/svg+xml",
+				href: "/favicon.svg",
+				sizes: "any",
 			},
 			{
 				rel: "stylesheet",
@@ -49,10 +45,31 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
+	notFoundComponent: RootNotFoundComponent,
 	shellComponent: RootDocument,
 });
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootComponent() {
+	const { pathname } = useLocation();
+	const activeView: PortfolioView | null =
+		pathname === "/" ? "work" : pathname === "/info" ? "info" : null;
+
+	return (
+		<PortfolioLayout activeView={activeView}>
+			<Outlet />
+		</PortfolioLayout>
+	);
+}
+
+function RootNotFoundComponent() {
+	return (
+		<PortfolioLayout activeView={null}>
+			<PortfolioNotFound />
+		</PortfolioLayout>
+	);
+}
+
+function RootDocument({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en">
 			<head>

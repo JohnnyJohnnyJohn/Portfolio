@@ -2,5 +2,6 @@ project: Portfolio
 services:
   web:
     root: .
+    install: bun install --frozen-lockfile
     build: bun run build
-    start: bun run dev
+    start: bun server.mjs

@@ -154,9 +154,9 @@ function WindowImage({ alt, src }: { alt: string; src: string }) {
 				containerWidth="100%"
 				imageHeight="auto"
 				imageWidth="100%"
-				rotateAmplitude={15}
+				rotateAmplitude={10}
 				scaleOnHover={1.1}
-				showMobileWarning={false}
+				showMobileWarning={true}
 				showTooltip={false}
 			>
 				<div className="overflow-hidden rounded-3xl bg-[radial-gradient(circle_farthest-side_at_50%_0,rgba(242,242,242,.2),transparent)] p-2 shadow-[inset_0_0_8px_rgba(0,0,0,.4),0_0_60px_rgba(0,0,0,.2),0_30px_80px_rgba(0,0,0,.5)] outline-1 -outline-offset-1 outline-white/15 min-[1920px]:rounded-[36px] min-[1920px]:p-3">
@@ -266,7 +266,7 @@ function LogoMark({ className }: { className?: string }) {
 function Overline({ children }: { children: ReactNode }) {
 	return (
 		<div className="flex items-center gap-2">
-			<span className="size-2.5 rounded-full bg-[#f2f2f2] shadow-[0_0_16px_rgba(255,255,255,.55)]" />
+			<span className="size-2.5 rounded-full bg-[#f2f2f2] shadow-[0_0_16px_rgba(255,255,255,.7)]" />
 			<p className="text-xs leading-tight font-semibold tracking-widest text-[#f2f2f2]/70">
 				{children}
 			</p>

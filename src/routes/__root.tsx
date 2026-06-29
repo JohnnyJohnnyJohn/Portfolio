@@ -31,13 +31,36 @@ export const Route = createRootRoute({
 				content:
 					"Portfolio of Fethi Sedjai, TypeScript application developer based in Marseille.",
 			},
+			{
+				name: "apple-mobile-web-app-title",
+				content: "Fethi Sedjai",
+			},
 		],
 		links: [
 			{
 				rel: "icon",
+				href: "/favicon.ico",
+				sizes: "any",
+			},
+			{
+				rel: "icon",
+				type: "image/png",
+				href: "/favicon-96x96.png",
+				sizes: "96x96",
+			},
+			{
+				rel: "icon",
 				type: "image/svg+xml",
 				href: "/favicon.svg",
-				sizes: "any",
+			},
+			{
+				rel: "apple-touch-icon",
+				sizes: "180x180",
+				href: "/apple-touch-icon.png",
+			},
+			{
+				rel: "manifest",
+				href: "/site.webmanifest",
 			},
 			{
 				rel: "stylesheet",

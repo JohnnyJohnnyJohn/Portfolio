@@ -1,7 +1,12 @@
 import type { SpringOptions } from "motion/react";
 import { motion, useMotionValue, useSpring } from "motion/react";
-import type { ComponentProps, CSSProperties, ReactNode } from "react";
-import { useRef, useState } from "react";
+import type {
+	ComponentProps,
+	CSSProperties,
+	MouseEvent,
+	ReactNode,
+} from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "#/lib/utils";
 
 interface TiltedCardProps {
@@ -61,9 +66,32 @@ export default function TiltedCard({
 	});
 
 	const [lastY, setLastY] = useState(0);
+	const [canHover, setCanHover] = useState(false);
 
-	function handleMouse(e: React.MouseEvent<HTMLElement>) {
-		if (!ref.current) return;
+	const resetMotion = useCallback(() => {
+		opacity.set(0);
+		scale.set(1);
+		rotateX.set(0);
+		rotateY.set(0);
+		rotateFigcaption.set(0);
+		setLastY(0);
+	}, [opacity, rotateFigcaption, rotateX, rotateY, scale]);
+
+	useEffect(() => {
+		if (typeof window === "undefined") return;
+		const media = window.matchMedia("(hover: hover) and (pointer: fine)");
+		const syncHoverCapability = () => {
+			setCanHover(media.matches);
+			if (!media.matches) resetMotion();
+		};
+
+		syncHoverCapability();
+		media.addEventListener("change", syncHoverCapability);
+		return () => media.removeEventListener("change", syncHoverCapability);
+	}, [resetMotion]);
+
+	function handleMouse(e: MouseEvent<HTMLElement>) {
+		if (!canHover || !ref.current) return;
 
 		const rect = ref.current.getBoundingClientRect();
 		const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -84,23 +112,21 @@ export default function TiltedCard({
 	}
 
 	function handleMouseEnter() {
+		if (!canHover) return;
 		scale.set(scaleOnHover);
 		opacity.set(1);
 	}
 
 	function handleMouseLeave() {
-		opacity.set(0);
-		scale.set(1);
-		rotateX.set(0);
-		rotateY.set(0);
-		rotateFigcaption.set(0);
+		if (!canHover) return;
+		resetMotion();
 	}
 
 	return (
 		<figure
 			ref={ref}
 			className={cn(
-				"relative flex h-full w-full flex-col items-center justify-center [perspective:800px]",
+				"relative flex h-full w-full flex-col items-center justify-center perspective-midrange",
 				className,
 			)}
 			style={{
@@ -118,7 +144,7 @@ export default function TiltedCard({
 			)}
 
 			<motion.div
-				className="relative [transform-style:preserve-3d]"
+				className="relative transform-3d"
 				style={{
 					width: imageWidth,
 					height: imageHeight,
@@ -132,7 +158,7 @@ export default function TiltedCard({
 						<motion.img
 							alt={altText}
 							className={cn(
-								"absolute top-0 left-0 rounded-[15px] object-cover will-change-transform [transform:translateZ(0)]",
+								"absolute top-0 left-0 rounded-[15px] object-cover will-change-transform transform-[translateZ(0)]",
 								imageClassName,
 							)}
 							src={imageSrc}
@@ -144,7 +170,7 @@ export default function TiltedCard({
 					) : null)}
 
 				{displayOverlayContent && overlayContent && (
-					<motion.div className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)]">
+					<motion.div className="absolute top-0 left-0 z-2 will-change-transform transform-[translateZ(30px)]">
 						{overlayContent}
 					</motion.div>
 				)}
@@ -152,7 +178,7 @@ export default function TiltedCard({
 
 			{showTooltip && (
 				<motion.figcaption
-					className="pointer-events-none absolute top-0 left-0 z-[3] hidden rounded-[4px] bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-0 sm:block"
+					className="pointer-events-none absolute top-0 left-0 z-3 hidden rounded-lg bg-white px-2.5 py-1 text-[10px] text-[#2d2d2d] opacity-0 sm:block"
 					style={{
 						x,
 						y,

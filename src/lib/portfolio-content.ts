@@ -83,7 +83,7 @@ export const projects: Project[] = [
 		description:
 			"Helping product teams validate branches in seconds through preview URLs, a React dashboard and contextual feedback overlay.",
 		href: "https://devver.app",
-		thumbnail: "/devver.png",
+		thumbnail: "/devver.webp",
 		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(52,211,153,.46),transparent_60%),radial-gradient(circle_at_50%_0,rgba(137,119,68,.34),transparent_70%),radial-gradient(circle_at_50%_0,rgba(37,37,37,.9),transparent)]",
 		borderGlow: {
 			glowColor: "156 67 58",
@@ -97,7 +97,7 @@ export const projects: Project[] = [
 		description:
 			"Building the service layer behind a sovereign AI platform: organizations, permissions, storage, AI agents and MCP-ready workflows.",
 		href: "https://oreus.ai",
-		thumbnail: "/oreus.png",
+		thumbnail: "/oreus.webp",
 		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(116,132,155,.52),transparent_60%),radial-gradient(circle_at_50%_0,rgba(143,118,117,.36),transparent_72%),radial-gradient(circle_at_50%_0,rgba(23,23,25,.9),transparent)]",
 		borderGlow: {
 			glowColor: "216 18 64",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
 		description:
 			"Improving an AI-powered recruiting platform across candidate journeys, recruiter workflows, ATS integrations and operational dashboards.",
 		href: "https://allinonerh.ai",
-		thumbnail: "/aio.png",
+		thumbnail: "/aio.webp",
 		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(106,107,224,.6),transparent_58%),radial-gradient(circle_at_50%_0,rgba(126,142,214,.38),transparent_70%),radial-gradient(circle_at_50%_0,rgba(206,155,118,.28),transparent)]",
 		borderGlow: {
 			glowColor: "239 66 65",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
 		description:
 			"Designing a platform where accessibility solutions, discussions and resources become easier to share, discover and maintain.",
 		href: "https://izilife.fr",
-		thumbnail: "/izilife.png",
+		thumbnail: "/izilife.webp",
 		glow: "bg-[radial-gradient(circle_at_50%_0,rgba(131,102,152,.62),transparent_58%),radial-gradient(circle_at_50%_0,rgba(236,72,153,.3),transparent_72%),radial-gradient(circle_at_50%_0,rgba(75,51,87,.74),transparent)]",
 		borderGlow: {
 			glowColor: "279 22 58",
@@ -236,38 +236,38 @@ const infoStoryContent = {
 export const infoDesktopStoryBlocks: InfoStoryBlock[] = [
 	{
 		...infoStoryContent.question,
-		image: "/bloc1.png",
+		image: "/bloc1.webp",
 		imageAlt: "Portrait of Fethi Sedjai",
 		imageFirst: true,
 	},
 	{
 		...infoStoryContent.developer,
-		image: "/bloc2.png",
+		image: "/bloc2.webp",
 		imageAlt: "Child portrait outdoors",
 		offset: true,
 	},
 	{
 		...infoStoryContent.music,
-		image: "/bloc3.png",
+		image: "/bloc3.webp",
 		imageAlt: "Scuba diving scene underwater",
 		imageFirst: true,
 	},
 	{
 		...infoStoryContent.testing,
-		image: "/bloc4.png",
+		image: "/bloc4.webp",
 		imageAlt: "Rapper performing on stage",
 		offset: true,
 	},
 	{
 		...infoStoryContent.learning,
 		hasClosing: true,
-		image: "/bloc5.png",
+		image: "/bloc5.webp",
 		imageAlt: "Skydiving over a wide landscape",
 		imageFirst: true,
 	},
 	{
 		...infoStoryContent.constraints,
-		image: "/bloc6.png",
+		image: "/bloc6.webp",
 		imageAlt: "Cinematic technology portrait at night",
 		offset: true,
 	},
@@ -276,33 +276,33 @@ export const infoDesktopStoryBlocks: InfoStoryBlock[] = [
 export const infoMobileStoryBlocks: InfoStoryBlock[] = [
 	{
 		...infoStoryContent.developer,
-		image: "/bloc1.png",
+		image: "/bloc1.webp",
 		imageAlt: "Portrait of Fethi Sedjai by the sea",
 	},
 	{
 		...infoStoryContent.question,
-		image: "/bloc2.png",
+		image: "/bloc2.webp",
 		imageAlt: "Child portrait outdoors",
 	},
 	{
 		...infoStoryContent.testing,
-		image: "/bloc3.png",
+		image: "/bloc3.webp",
 		imageAlt: "Scuba diving scene underwater",
 	},
 	{
 		...infoStoryContent.music,
-		image: "/bloc4.png",
+		image: "/bloc4.webp",
 		imageAlt: "Rapper performing on stage",
 	},
 	{
 		...infoStoryContent.constraints,
-		image: "/bloc5.png",
+		image: "/bloc5.webp",
 		imageAlt: "Skydiving over a wide landscape",
 	},
 	{
 		...infoStoryContent.learning,
 		hasClosing: true,
-		image: "/bloc6.png",
+		image: "/bloc6.webp",
 		imageAlt: "Cinematic technology portrait at night",
 	},
 ];
